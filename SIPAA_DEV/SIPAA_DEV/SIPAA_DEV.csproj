@@ -53,6 +53,7 @@
       <DependentUpon>Acceso.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Prueba.cs" />
     <Compile Include="Recursos_Humanos\Administracion\CrearModulo.cs">
       <SubType>Form</SubType>
     </Compile>
