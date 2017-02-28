@@ -9,4 +9,6 @@ namespace SIPAA_DEV
     class Prueba
     {
     }
+
+    public static void MetodoPrueba() { }
 }
