@@ -201,43 +201,43 @@ namespace SIPAA_DEV.Recursos_Humanos.Administracion
                         string strMensaje, int iOpcion, object sender, EventArgs e)
         {
 
-            if (txt.Text != String.Empty || txt.Text != "Sin Selección")
-            {
+            //if (txt.Text != String.Empty || txt.Text != "Sin Selección")
+            //{
                 
-                try
-                {
-                    int iResponse = objPerfil.intGestionarPerfiles(objPerfil, iOpcion);
-                    if (iResponse == iOpcion)
-                    {
-                        panelTag.Visible = true;
-                        panelTag.BackColor = ColorTranslator.FromHtml("#439047");
-                        lbMensaje.Text = strMensaje;
-                      //  Thread.Sleep(3000);
-                        Crear_Perfil_Load(sender, e);
-                    }
-                    else if (iResponse == 0)
-                    {
-                            panelTag.Visible = true;
-                            panelTag.BackColor = ColorTranslator.FromHtml("#29b6f6");
-                            lbMensaje.Text = "El Perfil Ingresado ya se encuentra registrado.";
-                    }
+            //    try
+            //    {
+            //        int iResponse = objPerfil.GestionarPerfiles(objPerfil, iOpcion);
+            //        if (iResponse == iOpcion)
+            //        {
+            //            panelTag.Visible = true;
+            //            panelTag.BackColor = ColorTranslator.FromHtml("#439047");
+            //            lbMensaje.Text = strMensaje;
+            //          //  Thread.Sleep(3000);
+            //            Crear_Perfil_Load(sender, e);
+            //        }
+            //        else if (iResponse == 0)
+            //        {
+            //                panelTag.Visible = true;
+            //                panelTag.BackColor = ColorTranslator.FromHtml("#29b6f6");
+            //                lbMensaje.Text = "El Perfil Ingresado ya se encuentra registrado.";
+            //        }
 
-                }
-                catch (Exception ex)
-                {
+            //    }
+            //    catch (Exception ex)
+            //    {
 
-                    panelTag.Visible = true;
-                    panelTag.BackColor = ColorTranslator.FromHtml("#ef5350");
-                    lbMensaje.Text = "Error de Comunicación con el servidor. Favor de Intentarlo más tarde";
-                }
-            }
-            else
-            {
+            //        panelTag.Visible = true;
+            //        panelTag.BackColor = ColorTranslator.FromHtml("#ef5350");
+            //        lbMensaje.Text = "Error de Comunicación con el servidor. Favor de Intentarlo más tarde";
+            //    }
+            //}
+            //else
+            //{
 
-                panelTag.Visible = true;
-                panelTag.BackColor = ColorTranslator.FromHtml("#29b6f");
-                lbMensaje.Text = "El Campo Editar no puede ir Vacio";
-            }
+            //    panelTag.Visible = true;
+            //    panelTag.BackColor = ColorTranslator.FromHtml("#29b6f6");
+            //    lbMensaje.Text = "El Campo Editar no puede ir Vacio";
+            //}
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -290,6 +290,11 @@ namespace SIPAA_DEV.Recursos_Humanos.Administracion
             txtPerfilEditar.Enabled = true;
             btnEliminar.Enabled = true;
             btnUPD.Enabled = true;*/
+        }
+
+        private void dgvPerfiles_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     }
