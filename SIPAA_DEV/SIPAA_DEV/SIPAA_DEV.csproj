@@ -53,12 +53,7 @@
       <DependentUpon>Acceso.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
-    <Compile Include="Recursos_Humanos\Administracion\Asignar_Perfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Recursos_Humanos\Administracion\Asignar_Perfil.Designer.cs">
-      <DependentUpon>Asignar_Perfil.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Prueba.cs" />
     <Compile Include="Recursos_Humanos\Administracion\CrearModulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,9 +86,7 @@
     <Compile Include="Recursos_Humanos\Administracion\Crear_Perfil.Designer.cs">
       <DependentUpon>Crear_Perfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Recursos_Humanos\App_Code\Modulos.cs" />
     <Compile Include="Recursos_Humanos\App_Code\Perfiles.cs" />
-    <Compile Include="Recursos_Humanos\App_Code\Usuario.cs" />
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,9 +98,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearAccesoUsuario.resx">
       <DependentUpon>CrearAccesoUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Recursos_Humanos\Administracion\Asignar_Perfil.resx">
-      <DependentUpon>Asignar_Perfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos_Humanos\Administracion\CrearModulo.resx">
       <DependentUpon>CrearModulo.cs</DependentUpon>
@@ -404,30 +394,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_remove_circle_outline_white_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_lens_grey_500_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_lens_grey_500_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_lens_blue_grey_600_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_lens_blue_grey_600_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_check_circle_green_200_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_check_circle_green_200_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_search_white_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_search_white_18dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
