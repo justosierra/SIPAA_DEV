@@ -23,7 +23,7 @@ namespace SIPAA_DEV
             {
                 cn = new SqlConnection("Data Source=192.168.9.77;Initial Catalog=sipaa_d;User ID=Desarrollo;Password=Desa17");
                 cn.Open();
-                MessageBox.Show("Conectado");
+               // MessageBox.Show("Conectado");
             }
             catch (Exception ex)
             {

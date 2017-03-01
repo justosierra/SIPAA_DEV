@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SIPAA_DEV.Recursos_Humanos.Administracion;
 
 namespace SIPAA_DEV
 {
@@ -16,7 +17,7 @@ namespace SIPAA_DEV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Crear_Perfil());
+            Application.Run(new Asignar_Perfil());
         }
     }
 }
