@@ -23,7 +23,7 @@ namespace SIPAA_DEV
             {
                 cn = new SqlConnection("Data Source=192.168.9.77;Initial Catalog=sipaa_d;User ID=Desarrollo;Password=Desa17");
                 cn.Open();
-               // MessageBox.Show("Conectado");
+                //MessageBox.Show("Conectado");
             }
             catch (Exception ex)
             {
@@ -134,7 +134,7 @@ namespace SIPAA_DEV
         {
             try
             {
-                da = new SqlDataAdapter("select * from ACCECMODULO", cn);
+                da = new SqlDataAdapter("SELECT CVMODULO,DESCRIPCION,CVMODPAD,ORDEN,AMBIENTE,MODULO,USUUMOD,FHUMOD,PRGUMOD from ACCECMODULO", cn);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -152,13 +152,13 @@ namespace SIPAA_DEV
 
             try
             {
-                cmd = new SqlCommand("select * from ACCECMODULO where CVMODULO like '%'+@cvmodulo+'%'", cn);
-                cmd.Parameters.Add("@cvmodulo", SqlDbType.VarChar).Value = cvmodulo;
+                cmd = new SqlCommand("select * from ACCECMODULO where CVMODULO like '%'+@cvmodulo+'%'",cn);
+                cmd.Parameters.Add("@cvmodulo",SqlDbType.VarChar).Value=cvmodulo;
                 //cmd = new SqlCommand("select * from ACCECMODULO where CVMODULO like '%rh%'", cn);
                 da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
                 da.Fill(dt);
-
+                
             }
             catch (Exception ex)
             {

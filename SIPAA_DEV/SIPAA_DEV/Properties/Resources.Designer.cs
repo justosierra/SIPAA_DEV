@@ -183,16 +183,6 @@ namespace SIPAA_DEV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ic_check_circle_green_200_18dp {
-            get {
-                object obj = ResourceManager.GetObject("ic_check_circle_green_200_18dp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ic_clear_white_18dp {
             get {
                 object obj = ResourceManager.GetObject("ic_clear_white_18dp", resourceCulture);
@@ -373,16 +363,6 @@ namespace SIPAA_DEV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ic_lens_blue_grey_600_18dp {
-            get {
-                object obj = ResourceManager.GetObject("ic_lens_blue_grey_600_18dp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ic_local_shipping_white_48dp {
             get {
                 object obj = ResourceManager.GetObject("ic_local_shipping_white_48dp", resourceCulture);
@@ -436,16 +416,6 @@ namespace SIPAA_DEV.Properties {
         internal static System.Drawing.Bitmap ic_school_white_48dp {
             get {
                 object obj = ResourceManager.GetObject("ic_school_white_48dp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ic_search_white_18dp {
-            get {
-                object obj = ResourceManager.GetObject("ic_search_white_18dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

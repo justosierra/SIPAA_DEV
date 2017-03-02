@@ -22,6 +22,7 @@ namespace SIPAA_DEV
         public CrearModulo()
         {
             InitializeComponent();
+           
         }
 
         private void BarraSuperior_MouseUp(object sender, MouseEventArgs e)
@@ -119,7 +120,7 @@ namespace SIPAA_DEV
 
         private void CrearModulo_Load(object sender, EventArgs e)
         {
-            Conexion c = new Conexion();
+            //Conexion c = new Conexion();
             c.mostrarModulo(dgvModulo);
         }
 
