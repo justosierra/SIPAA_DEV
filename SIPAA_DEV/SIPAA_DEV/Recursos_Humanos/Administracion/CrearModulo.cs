@@ -78,6 +78,7 @@ namespace SIPAA_DEV
             int orden;
 
             // Se asginan valores de los componentes
+
             cvmodulo = txtCvModulo.Text;
             descripcion = txtDescripcion.Text;
             cvmodpad = txtCvModPad.Text;
