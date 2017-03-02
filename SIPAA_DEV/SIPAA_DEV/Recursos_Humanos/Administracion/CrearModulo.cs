@@ -211,5 +211,56 @@ namespace SIPAA_DEV
                 txtPrgUmodB.Text = prgumod;
             }
         }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            //Se instancia la clase conexion
+            //Conexion c = new Conexion();
+
+            //Se declaran variables locales
+            string cvmodulo, descripcion, cvmodpad, ambiente, modulo, usuumod, prgumod, fhumod, fecha, hora, fecha_hora;
+            DateTime fhumod1, fh;
+            int orden;
+
+            // Se asginan valores de los componentes
+
+            cvmodulo = txtCvModulo.Text;
+            descripcion = txtDescripcion.Text;
+            cvmodpad = txtCvModPad.Text;
+            ambiente = txtAmbiente.Text;
+            modulo = txtModulo.Text;
+            usuumod = txtUsuUmod.Text;
+            prgumod = txtPrguMod.Text;
+
+
+            //fhumod = dtpFhuMod.Text;
+            //Se parsea el texto tomado del datetimepicker 
+            //fhumod1 = DateTime.Parse(fhumod);
+
+            orden = int.Parse(txtOrden.Text);
+
+            //se arma la fecha 
+            fecha = DateTime.Now.ToShortDateString();
+            hora = DateTime.Now.ToLongTimeString();
+
+            fecha_hora = fecha + " " + hora;
+
+            fh = DateTime.Parse(fecha_hora);
+            //MessageBox.Show(fecha_hora);
+
+            // pasamos parametros a la funcion
+            c.crearModulo(cvmodulo, descripcion, cvmodpad, orden, ambiente, modulo, usuumod, fh, prgumod);
+
+            txtCvModulo.Text = "";
+            txtDescripcion.Text = "";
+            txtCvModPad.Text = "";
+            txtOrden.Text = "";
+            txtAmbiente.Text = "";
+            txtModulo.Text = "";
+            txtUsuUmod.Text = "";
+            txtPrguMod.Text = "";
+
+            CrearModulo_Load(sender, e);
+        }
     }
 }

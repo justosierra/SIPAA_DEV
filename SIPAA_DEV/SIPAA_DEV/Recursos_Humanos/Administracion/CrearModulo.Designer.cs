@@ -59,7 +59,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -69,7 +69,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtPrgUmodA = new System.Windows.Forms.TextBox();
             this.txtUsuUmodA = new System.Windows.Forms.TextBox();
             this.txtModuloA = new System.Windows.Forms.TextBox();
@@ -95,6 +94,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtPrgUmodB = new System.Windows.Forms.TextBox();
             this.txtUsuUmodB = new System.Windows.Forms.TextBox();
             this.txtModuloB = new System.Windows.Forms.TextBox();
@@ -247,7 +247,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(475, 486);
+            this.button2.Location = new System.Drawing.Point(475, 491);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 28);
@@ -259,7 +259,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(116, 499);
+            this.label7.Location = new System.Drawing.Point(116, 504);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 16);
@@ -269,7 +269,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
-            this.panel9.Location = new System.Drawing.Point(208, 512);
+            this.panel9.Location = new System.Drawing.Point(208, 517);
             this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(230, 2);
@@ -280,7 +280,7 @@
             this.txtBCvModulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtBCvModulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBCvModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBCvModulo.Location = new System.Drawing.Point(209, 492);
+            this.txtBCvModulo.Location = new System.Drawing.Point(209, 497);
             this.txtBCvModulo.Name = "txtBCvModulo";
             this.txtBCvModulo.Size = new System.Drawing.Size(230, 17);
             this.txtBCvModulo.TabIndex = 56;
@@ -289,24 +289,27 @@
             // dgvModulo
             // 
             this.dgvModulo.AllowUserToAddRows = false;
-            this.dgvModulo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvModulo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.dgvModulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvModulo.Location = new System.Drawing.Point(111, 537);
             this.dgvModulo.Name = "dgvModulo";
             this.dgvModulo.RowHeadersVisible = false;
+            this.dgvModulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvModulo.Size = new System.Drawing.Size(748, 190);
             this.dgvModulo.TabIndex = 58;
             this.dgvModulo.SelectionChanged += new System.EventHandler(this.dgvModulo_SelectionChanged);
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(107, 214);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(752, 251);
+            this.tabControl1.Size = new System.Drawing.Size(752, 272);
             this.tabControl1.TabIndex = 59;
             // 
             // tabPage1
@@ -328,7 +331,7 @@
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btnCrear);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label6);
@@ -337,11 +340,11 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(744, 225);
+            this.tabPage1.Size = new System.Drawing.Size(744, 235);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Crear Modulo";
             // 
@@ -497,19 +500,20 @@
             this.panel2.Size = new System.Drawing.Size(230, 2);
             this.panel2.TabIndex = 63;
             // 
-            // button1
+            // btnCrear
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(160)))), ((int)(((byte)(71)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(307, 191);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 28);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "Crear";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(160)))), ((int)(((byte)(71)))));
+            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.ForeColor = System.Drawing.Color.White;
+            this.btnCrear.Location = new System.Drawing.Point(307, 191);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(180, 28);
+            this.btnCrear.TabIndex = 62;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // label10
             // 
@@ -627,47 +631,12 @@
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(744, 225);
+            this.tabPage2.Size = new System.Drawing.Size(744, 235);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Editar Modulo";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabPage3.Controls.Add(this.txtPrgUmodB);
-            this.tabPage3.Controls.Add(this.txtUsuUmodB);
-            this.tabPage3.Controls.Add(this.txtModuloB);
-            this.tabPage3.Controls.Add(this.txtAmbienteB);
-            this.tabPage3.Controls.Add(this.txtOrdenB);
-            this.tabPage3.Controls.Add(this.txtCvModPadB);
-            this.tabPage3.Controls.Add(this.txtDescripcionB);
-            this.tabPage3.Controls.Add(this.txtCvModuloB);
-            this.tabPage3.Controls.Add(this.panel21);
-            this.tabPage3.Controls.Add(this.panel22);
-            this.tabPage3.Controls.Add(this.panel23);
-            this.tabPage3.Controls.Add(this.panel24);
-            this.tabPage3.Controls.Add(this.panel25);
-            this.tabPage3.Controls.Add(this.panel26);
-            this.tabPage3.Controls.Add(this.panel27);
-            this.tabPage3.Controls.Add(this.panel28);
-            this.tabPage3.Controls.Add(this.btnEliminar);
-            this.tabPage3.Controls.Add(this.label19);
-            this.tabPage3.Controls.Add(this.label20);
-            this.tabPage3.Controls.Add(this.label21);
-            this.tabPage3.Controls.Add(this.label22);
-            this.tabPage3.Controls.Add(this.label23);
-            this.tabPage3.Controls.Add(this.label24);
-            this.tabPage3.Controls.Add(this.label25);
-            this.tabPage3.Controls.Add(this.label26);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(744, 225);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Eliminar Modulo";
             // 
             // txtPrgUmodA
             // 
@@ -923,6 +892,41 @@
             this.label18.Size = new System.Drawing.Size(84, 16);
             this.label18.TabIndex = 79;
             this.label18.Text = "CVMODULO";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage3.Controls.Add(this.txtPrgUmodB);
+            this.tabPage3.Controls.Add(this.txtUsuUmodB);
+            this.tabPage3.Controls.Add(this.txtModuloB);
+            this.tabPage3.Controls.Add(this.txtAmbienteB);
+            this.tabPage3.Controls.Add(this.txtOrdenB);
+            this.tabPage3.Controls.Add(this.txtCvModPadB);
+            this.tabPage3.Controls.Add(this.txtDescripcionB);
+            this.tabPage3.Controls.Add(this.txtCvModuloB);
+            this.tabPage3.Controls.Add(this.panel21);
+            this.tabPage3.Controls.Add(this.panel22);
+            this.tabPage3.Controls.Add(this.panel23);
+            this.tabPage3.Controls.Add(this.panel24);
+            this.tabPage3.Controls.Add(this.panel25);
+            this.tabPage3.Controls.Add(this.panel26);
+            this.tabPage3.Controls.Add(this.panel27);
+            this.tabPage3.Controls.Add(this.panel28);
+            this.tabPage3.Controls.Add(this.btnEliminar);
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.label20);
+            this.tabPage3.Controls.Add(this.label21);
+            this.tabPage3.Controls.Add(this.label22);
+            this.tabPage3.Controls.Add(this.label23);
+            this.tabPage3.Controls.Add(this.label24);
+            this.tabPage3.Controls.Add(this.label25);
+            this.tabPage3.Controls.Add(this.label26);
+            this.tabPage3.Location = new System.Drawing.Point(4, 33);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(744, 235);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Eliminar Modulo";
             // 
             // txtPrgUmodB
             // 
@@ -1249,7 +1253,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
