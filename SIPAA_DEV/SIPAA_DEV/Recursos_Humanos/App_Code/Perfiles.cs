@@ -16,12 +16,14 @@ namespace SIPAA_DEV.Recursos_Humanos.App_Code
         public string UsuuMod;
         public DateTime FhumMod;
         public string PrguMod;
-       
+      //  Conexion objConexion = new Conexion();
 
         public Dictionary<int,string> ObtenerListPerfiles() {
 
             Dictionary<int, string> dcPerfiles = new Dictionary<int, string>();
 
+         //   ConnectionStringSettings strConexion = ConfigurationManager.ConnectionStrings["DefaultConnection"];
+            SqlConnection sqlConnection1 = new SqlConnection("Data Source=192.168.9.77;Initial Catalog=sipaa_d;User ID=Desarrollo;Password=Desa17");
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"SELECT [CVPERFIL]
                                      ,[DESCRIPCION]
@@ -29,10 +31,10 @@ namespace SIPAA_DEV.Recursos_Humanos.App_Code
                                      ,[FHUMOD]
                                      ,[PRGUMOD]
                                      FROM[dbo].[ACCECPERFIL]";
-            Conexion objConexion = new Conexion();
-            objConexion.asignarConexion(cmd);
 
-           
+            cmd.Connection = sqlConnection1;
+
+            sqlConnection1.Open();
 
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -47,7 +49,8 @@ namespace SIPAA_DEV.Recursos_Humanos.App_Code
                 dcPerfiles.Add(objPerfiles.CVPerfil, objPerfiles.Descripcion);
             }
 
-            objConexion.cerrarConexion();
+            sqlConnection1.Close();
+
             return dcPerfiles;
 
         }
@@ -57,19 +60,22 @@ namespace SIPAA_DEV.Recursos_Humanos.App_Code
         {
 
 
-          SqlCommand cmd = new SqlCommand();
+            //   ConnectionStringSettings strConexion = ConfigurationManager.ConnectionStrings["DefaultConnection"];
+            SqlConnection sqlConnection1 = new SqlConnection("Data Source=192.168.9.77;Initial Catalog=sipaa_d;User ID=Desarrollo;Password=Desa17");
+            SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"SELECT CVPERFIL, DESCRIPCION
-                                FROM ACCECPERFIL WHERE DESCRIPCION LIKE '%'+ @Descripcion +'%'" ;
+                                FROM ACCECPERFIL WHERE DESCRIPCION LIKE '%'+ @Descripcion +'%'";
 
 
-            cmd.Parameters.Add("@Descripcion", SqlDbType.VarChar).Value = Descripcion;
+            cmd.Parameters.Add(@"Descripcion", SqlDbType.VarChar).Value = Descripcion;
 
-            Conexion objConexion = new Conexion();
-            objConexion.asignarConexion(cmd);
+            cmd.Connection = sqlConnection1;
+
+            sqlConnection1.Open();
 
             SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
 
-            objConexion.cerrarConexion();
+            sqlConnection1.Close();
 
             DataTable dtPerfiles = new DataTable();
             Adapter.Fill(dtPerfiles);
@@ -78,47 +84,21 @@ namespace SIPAA_DEV.Recursos_Humanos.App_Code
         }
 
 
-        public List<int> ObtenerPerfilesxUsuario(string cvUsuario)
-        {
-
-            List<int> ltPerfilesxUsuario = new List<int>();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"SELECT [CVUSUARIO]
-                                 ,[CVPERFIL]
-                                FROM [ACCEAUSUPER] WHERE CVUSUARIO = @cvUsuario";
-
-
-            cmd.Parameters.Add("@cvUsuario", SqlDbType.VarChar).Value = cvUsuario;
-
-            Conexion objConexion = new Conexion();
-            objConexion.asignarConexion(cmd);
-
-            SqlDataReader reader = cmd.ExecuteReader();
-
-
-            while (reader.Read()) {
-
-                CVPerfil = reader.GetInt32(reader.GetOrdinal("CVPERFIL"));
-                ltPerfilesxUsuario.Add(CVPerfil);
-            }
-
-            objConexion.cerrarConexion();
-
-            return ltPerfilesxUsuario;
-
-        }
-
-
-        public int GestionarPerfiles(Perfiles objPerfil,int iOpcion)
+        public int intGestionarPerfiles(Perfiles objPerfil,int iOpcion)
         {
 
 
 
+            //   ConnectionStringSettings strConexion = ConfigurationManager.ConnectionStrings["DefaultConnection"];
+
+         //   Conexion objConexion = new Conexion();
+
+            SqlConnection sqlConnection1 = new SqlConnection("Data Source=192.168.9.77;Initial Catalog=sipaa_d;User ID=Desarrollo;Password=Desa17");
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"sp_GestionPerfiles";
             cmd.CommandType = CommandType.StoredProcedure;
-            Conexion objConexion = new Conexion();
-            objConexion.asignarConexion(cmd);
+
+            cmd.Connection = sqlConnection1;
 
             cmd.Parameters.Add("@CvPerfil", SqlDbType.Int).Value = objPerfil.CVPerfil;
             cmd.Parameters.Add("@Descripcion", SqlDbType.VarChar).Value = objPerfil.Descripcion;
@@ -126,14 +106,12 @@ namespace SIPAA_DEV.Recursos_Humanos.App_Code
             cmd.Parameters.Add("@ProgramaUMod", SqlDbType.VarChar).Value = objPerfil.PrguMod;
             cmd.Parameters.Add("@Opcion", SqlDbType.Int).Value = iOpcion;
 
-
-
-            objConexion.asignarConexion(cmd);
+  
+            sqlConnection1.Open();
 
             int iResponse = Convert.ToInt32(cmd.ExecuteScalar());
 
-
-            objConexion.cerrarConexion();
+            sqlConnection1.Close();
 
             return iResponse;
 

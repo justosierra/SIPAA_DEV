@@ -206,7 +206,7 @@ namespace SIPAA_DEV.Recursos_Humanos.Administracion
                 
                 try
                 {
-                    int iResponse = objPerfil.GestionarPerfiles(objPerfil, iOpcion);
+                    int iResponse = objPerfil.intGestionarPerfiles(objPerfil, iOpcion);
                     if (iResponse == iOpcion)
                     {
                         panelTag.Visible = true;
@@ -235,7 +235,7 @@ namespace SIPAA_DEV.Recursos_Humanos.Administracion
             {
 
                 panelTag.Visible = true;
-                panelTag.BackColor = ColorTranslator.FromHtml("#29b6f6");
+                panelTag.BackColor = ColorTranslator.FromHtml("#29b6f");
                 lbMensaje.Text = "El Campo Editar no puede ir Vacio";
             }
         }
@@ -290,11 +290,6 @@ namespace SIPAA_DEV.Recursos_Humanos.Administracion
             txtPerfilEditar.Enabled = true;
             btnEliminar.Enabled = true;
             btnUPD.Enabled = true;*/
-        }
-
-        private void dgvPerfiles_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
     }
