@@ -209,6 +209,7 @@ namespace SIPAA_DEV.Recursos_Humanos.Administracion
         private void btnBuscarUsuario_Click(object sender, EventArgs e)
         {
             panelTag.Visible = false;
+            CVUsuario = null;
             dgvUsuarios.Columns.Remove(columnName: "imgUsuarios");
 
             string strUsuario = "";

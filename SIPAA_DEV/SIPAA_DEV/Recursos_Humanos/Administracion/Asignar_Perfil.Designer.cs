@@ -30,13 +30,13 @@
         {
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label4;
+            System.Windows.Forms.Label label5;
+            System.Windows.Forms.Label label6;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.Label label4;
-            System.Windows.Forms.Label label5;
-            System.Windows.Forms.Label label6;
             this.BarraSuperior = new System.Windows.Forms.Panel();
             this.btnMin = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -52,6 +52,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.PanelBuscar = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtIdTrab = new System.Windows.Forms.TextBox();
             this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -59,8 +61,6 @@
             this.btnBuscarPerfil = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtPerfil = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtIdTrab = new System.Windows.Forms.TextBox();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
@@ -103,6 +103,45 @@
             label3.Size = new System.Drawing.Size(141, 21);
             label3.TabIndex = 41;
             label3.Text = "     Buscar Usuario";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Enabled = false;
+            label4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            label4.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            label4.Location = new System.Drawing.Point(56, 36);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(53, 15);
+            label4.TabIndex = 47;
+            label4.Text = "Nombre";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Enabled = false;
+            label5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            label5.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            label5.Location = new System.Drawing.Point(56, 84);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(89, 15);
+            label5.TabIndex = 48;
+            label5.Text = "No Trabajador";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Enabled = false;
+            label6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            label6.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            label6.Location = new System.Drawing.Point(46, 31);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(86, 15);
+            label6.TabIndex = 49;
+            label6.Text = "Nombre Perfil";
             // 
             // BarraSuperior
             // 
@@ -344,6 +383,24 @@
             this.PanelBuscar.Size = new System.Drawing.Size(344, 140);
             this.PanelBuscar.TabIndex = 54;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
+            this.panel5.Location = new System.Drawing.Point(59, 126);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(109, 2);
+            this.panel5.TabIndex = 48;
+            // 
+            // txtIdTrab
+            // 
+            this.txtIdTrab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtIdTrab.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdTrab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdTrab.Location = new System.Drawing.Point(59, 102);
+            this.txtIdTrab.Name = "txtIdTrab";
+            this.txtIdTrab.Size = new System.Drawing.Size(109, 19);
+            this.txtIdTrab.TabIndex = 47;
+            // 
             // btnBuscarUsuario
             // 
             this.btnBuscarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
@@ -420,67 +477,11 @@
             this.txtPerfil.Size = new System.Drawing.Size(152, 19);
             this.txtPerfil.TabIndex = 42;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
-            this.panel5.Location = new System.Drawing.Point(59, 126);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(109, 2);
-            this.panel5.TabIndex = 48;
-            // 
-            // txtIdTrab
-            // 
-            this.txtIdTrab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtIdTrab.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIdTrab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdTrab.Location = new System.Drawing.Point(59, 102);
-            this.txtIdTrab.Name = "txtIdTrab";
-            this.txtIdTrab.Size = new System.Drawing.Size(109, 19);
-            this.txtIdTrab.TabIndex = 47;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Enabled = false;
-            label4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            label4.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            label4.Location = new System.Drawing.Point(56, 36);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(53, 15);
-            label4.TabIndex = 47;
-            label4.Text = "Nombre";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Enabled = false;
-            label5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            label5.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            label5.Location = new System.Drawing.Point(56, 84);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(89, 15);
-            label5.TabIndex = 48;
-            label5.Text = "No Trabajador";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Enabled = false;
-            label6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            label6.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            label6.Location = new System.Drawing.Point(46, 31);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(86, 15);
-            label6.TabIndex = 49;
-            label6.Text = "Nombre Perfil";
-            // 
             // Asignar_Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelBuscar);
