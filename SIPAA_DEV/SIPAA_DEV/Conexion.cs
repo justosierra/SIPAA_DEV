@@ -147,15 +147,70 @@ namespace SIPAA_DEV
 
 
         //funcion para buscar catalogo
-        public void buscarModulo(string cvmodulo)
+        public DataTable buscarModulo(string cvmodulo)
         {
+
             try
             {
-                cmd = new SqlCommand("select * from ACCECMODULO where CVMODULO like '%" + cvmodulo+"%'");
+                cmd = new SqlCommand("select * from ACCECMODULO where CVMODULO like '%'+@cvmodulo+'%'", cn);
+                cmd.Parameters.Add("@cvmodulo", SqlDbType.VarChar).Value = cvmodulo;
+                //cmd = new SqlCommand("select * from ACCECMODULO where CVMODULO like '%rh%'", cn);
+                da = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                da.Fill(dt);
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se encontro: " + ex);
+            }
+
+            return dt;
+        }
+
+        //funcion para actualizar catalogo
+        public void actualizarCatalogo(string cvmodulo, string descripcion, string cvmodpad, int orden, string ambiente, string modulo, string usuumod, DateTime fhumod, string prgumod)
+        {
+            int dr;
+            try
+            {
+                cmd = new SqlCommand("update ACCECMODULO set CVMODULO='" + cvmodulo + "', DESCRIPCION='" + descripcion + "', CVMODPAD='" + cvmodpad + "', ORDEN='" + orden + "',AMBIENTE= '" + ambiente + "', MODULO='" + modulo + "', USUUMOD='" + usuumod + "', FHUMOD='" + fhumod + "', PRGUMOD='" + prgumod + "' WHERE CVMODULO = '" + cvmodulo + "'", cn);
+                dr = cmd.ExecuteNonQuery();
+                if (dr == 1)
+                {
+                    MessageBox.Show("Se actualizó modulo");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo actualizar");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se actualizo: " + ex);
+            }
+        }
+
+        //funcion para borrar Catalogo
+        public void eliminarCatalogo(string cvmodulo)
+        {
+            int dr;
+            try
+            {
+                cmd = new SqlCommand("delete from ACCECMODULO where CVMODULO = '" + cvmodulo + "'", cn);
+                dr = cmd.ExecuteNonQuery();
+                if (dr == 1)
+                {
+                    MessageBox.Show("Se elimino modulo");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar modulo");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se elimino: " + ex);
             }
         }
     }
