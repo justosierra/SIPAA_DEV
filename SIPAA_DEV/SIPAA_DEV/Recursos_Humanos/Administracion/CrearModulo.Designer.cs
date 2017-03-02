@@ -66,7 +66,6 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.txtBCvModulo = new System.Windows.Forms.TextBox();
             this.dgvModulo = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
             this.BarraSuperior.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -494,27 +493,12 @@
             this.dgvModulo.Size = new System.Drawing.Size(684, 127);
             this.dgvModulo.TabIndex = 58;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(182)))), ((int)(((byte)(246)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(656, 446);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(180, 28);
-            this.button3.TabIndex = 59;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // CrearModulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1024, 768);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.dgvModulo);
             this.Controls.Add(this.txtBCvModulo);
             this.Controls.Add(this.panel9);
@@ -602,6 +586,5 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txtBCvModulo;
         private System.Windows.Forms.DataGridView dgvModulo;
-        private System.Windows.Forms.Button button3;
     }
 }
